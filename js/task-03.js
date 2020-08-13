@@ -1,13 +1,13 @@
 "use strict";
 
 const findBestEmployee = function (employees) {
-  const solveProblem = Object.values(employees);
-  for (let i = 1; i < solveProblem.length; i += 1) {
-    if (solveProblem[0] < solveProblem[i]) {
-      solveProblem[0] = solveProblem[i];
+  const values = Object.keys(employees);
+  for (let i = 0; i < values.length; i++) {
+    if (employees[values[i]] > employees[values[0]]) {
+      values[0] = values[i];
     }
   }
-  return (Object.keys = solveProblem[0]);
+  return values[0];
 };
 
 /*
